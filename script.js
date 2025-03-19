@@ -75,5 +75,5 @@ startButton.addEventListener('click', () => {
 // Close the winner popup and restart the game
 closeModal.addEventListener('click', () => {
   winnerPopup.style.display = 'none';
-  startButton.click(); // Restart the game
+  // startButton.click(); // Restart the game
 });
