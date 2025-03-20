@@ -35,6 +35,20 @@
       <p>Your Score: <span id="your-score">0</span></p>
       <p>Computer Score: <span id="opponent-score">0</span></p>
     </div>
+    <h1>Reaction Game</h1>
+    <div id="start-menu">
+      <label for="total-clicks">Total Clicks to Win:</label>
+      <input type="number" id="total-clicks" value="20" min="1">
+      <button id="start-button">🎮 Start Game 🎮</button>
+    </div>
+    <div id="scoreboard">
+      <p>Your Score: <span id="your-score">0</span></p>
+      <p>Opponent Score: <span id="opponent-score">0</span></p>
+    </div>
+    <div id="game-area">
+      <div id="target" class="target"></div>
+    </div>
+    <p id="game-status">Press Start to Play!</p>
 
     <!-- High Scores -->
     <div id="high-scores">
@@ -72,7 +86,13 @@
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
-
+    <!-- Winner Popup Modal -->
+    <div id="winner-popup" class="modal">
+        <div class="modal-content">
+        <h2 id="winner-message"></h2>
+        <button id="close-modal">🎉 Play Again 🎉</button>
+        </div>
+    </div>
   <script src="script.js"></script>
 </body>
 </html>
