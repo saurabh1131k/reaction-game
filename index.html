@@ -3,49 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reaction Game</title>
+  <title>Reaction Game - Test Your Reflexes!</title>
+  <meta name="description" content="Play the Reaction Game and test your reflexes! Click on the moving objects faster than your opponent to win. Fun and challenging for all ages.">
   <link rel="stylesheet" href="style.css">
+  <!-- AdSense Code -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4941768679146334"
      crossorigin="anonymous"></script>
 </head>
 <body>
   <div id="game-container">
-    <!-- First Ad Unit -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-4941768679146334"
-         data-ad-slot="9456006006"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    <h1>Reaction Game</h1>
-    <div id="start-menu">
-      <label for="total-clicks">Total Clicks to Win:</label>
-      <input type="number" id="total-clicks" value="20" min="1">
-      <button id="start-button">🎮 Start Game 🎮</button>
+    <h1>Reaction Game 🎮</h1>
+    <p>Test your reflexes and see how fast you can click! Compete against the computer or challenge your friends.</p>
+
+    <!-- Game Instructions -->
+    <div id="instructions">
+      <h2>How to Play</h2>
+      <ul>
+        <li>Click on the moving red circle as fast as you can.</li>
+        <li>You need <span id="total-clicks-display">20</span> clicks to win.</li>
+        <li>Beat the computer and set a high score!</li>
+      </ul>
     </div>
-    <div id="scoreboard">
-      <p>Your Score: <span id="your-score">0</span></p>
-      <p>Opponent Score: <span id="opponent-score">0</span></p>
-    </div>
+
+    <!-- Game Area -->
     <div id="game-area">
       <div id="target" class="target"></div>
     </div>
-    <p id="game-status">Press Start to Play!</p>
+
+    <!-- Scoreboard -->
+    <div id="scoreboard">
+      <p>Your Score: <span id="your-score">0</span></p>
+      <p>Computer Score: <span id="opponent-score">0</span></p>
+    </div>
+
+    <!-- High Scores -->
+    <div id="high-scores">
+      <h2>High Scores</h2>
+      <ul id="high-scores-list">
+        <li>Player 1 - 20 clicks</li>
+        <li>Player 2 - 18 clicks</li>
+      </ul>
+    </div>
+
+    <!-- Blog-like Section -->
+    <div id="blog-section">
+      <h2>Tips to Improve Your Reflexes</h2>
+      <p>Improving your reflexes can help you in many areas of life, from sports to everyday tasks. Here are some tips:</p>
+      <ul>
+        <li>Practice regularly with games like this one.</li>
+        <li>Stay focused and avoid distractions.</li>
+        <li>Exercise regularly to improve your overall reaction time.</li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
     <footer>
-      <p><a href="privacy-policy.html">Privacy Policy</a></p>
+      <p>© 2023 Reaction Game. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
     </footer>
   </div>
 
-  <!-- Winner Popup Modal -->
-  <div id="winner-popup" class="modal">
-    <div class="modal-content">
-      <h2 id="winner-message"></h2>
-      <button id="close-modal">🎉 Play Again 🎉</button>
-    </div>
-  </div>
+  <!-- AdSense Ad Unit -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4941768679146334"
+       data-ad-slot="9456006006"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 
   <script src="script.js"></script>
 </body>
