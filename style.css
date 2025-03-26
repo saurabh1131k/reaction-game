@@ -1,65 +1,154 @@
+/* Global Styles */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2E7D32;
+    --accent-color: #8BC34A;
+    --text-color: #333;
+    --light-text: #777;
+    --background: #f9f9f9;
+    --card-bg: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background);
+}
+
+h1, h2, h3, h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Layout */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.tagline {
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+}
+
+nav ul {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  #game-container {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
-  }
+    list-style: none;
+}
 
-  #start-menu input {
-    padding: 5px;
-    width: 60px;
-    margin-right: 10px;
-  }
-  
-  #start-menu button {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #4CAF50;
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
     color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #start-menu button:hover {
-    background-color: #45a049;
-  }
-  
-  h1 {
-    color: #4CAF50;
-  }
-  
-  #instructions, #high-scores, #blog-section {
-    margin: 20px 0;
-    text-align: left;
-  }
-  
-  #game-area {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav a.active {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 1rem;
+}
+
+/* Game Section */
+.game-section {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-info {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.controls {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#game-area {
     position: relative;
     width: 100%;
     height: 300px;
     background-color: #e0e0e0;
-    margin: 20px 0;
-    border-radius: 10px;
+    border-radius: 8px;
+    margin: 1rem 0;
     overflow: hidden;
-  }
-  
-  .target {
+}
+
+.target {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -67,19 +156,32 @@ body {
     border-radius: 50%;
     cursor: pointer;
     display: none;
-  }
-  
-  #scoreboard {
-    margin: 20px 0;
-    font-size: 1.2em;
-  }
-  
-  #game-status {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.score {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--card-bg);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#game-status {
     font-weight: bold;
-  }
-  
-  /* Winner Popup Modal */
-  .modal {
+    margin: 1rem 0;
+    min-height: 1.5rem;
+}
+
+/* Winner Popup Modal */
+.modal {
     display: none;
     position: fixed;
     top: 0;
@@ -113,23 +215,85 @@ body {
   #close-modal:hover {
     background-color: #45a049;
   }
-  
-  #high-scores-list {
-    list-style-type: none;
-    padding: 0;
+
+  #start-menu input {
+    padding: 5px;
+    width: 60px;
+    margin-right: 10px;
   }
   
-  footer {
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #777;
+  #start-menu button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
   }
   
-  footer a {
-    color: #4CAF50;
-    text-decoration: none;
+  #start-menu button:hover {
+    background-color: #45a049;
   }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
+
+/* Content Sections */
+.intro, .science, .about-content, .training-guide {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Training Page Specific */
+.training-schedule {
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 0.5rem 0;
+    }
+    
+    .controls {
+        flex-direction: column;
+    }
+    
+    #scoreboard {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
