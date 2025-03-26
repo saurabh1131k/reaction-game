@@ -1,75 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reaction Game - Test Your Reflexes!</title>
-  <meta name="description" content="Play the Reaction Game and test your reflexes! Click on the moving objects faster than your opponent to win. Fun and challenging for all ages.">
-  <link rel="stylesheet" href="style.css">
-  <!-- AdSense Code -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4941768679146334"
-     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Improve your reaction time with our scientifically-designed reaction game. Train your reflexes with fun challenges and track your progress.">
+    <title>Reflex Trainer Pro - Improve Your Reaction Time</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- AdSense Code (only add after approval) -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_CLIENT_ID" crossorigin="anonymous"></script> -->
 </head>
 <body>
-  <div id="game-container">
-    <h1>Reaction Game 🎮</h1>
-    <p>Test your reflexes and see how fast you can click! Compete against the computer or challenge your friends.</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="training.html">Training Tips</a></li>
+            </ul>
+        </nav>
+        <h1>Reflex Trainer Pro</h1>
+        <p class="tagline">Scientifically-designed exercises to improve your reaction time</p>
+    </header>
 
-    <!-- Game Instructions -->
-    <div id="instructions">
-      <h2>How to Play</h2>
-      <ul>
-        <li>Click on the moving red circle as fast as you can.</li>
-        <li>You need <span id="total-clicks-display">20</span> clicks to win.</li>
-        <li>Beat the computer and set a high score!</li>
-      </ul>
-    </div>
+    <main>
+        <section class="intro">
+            <h2>Why Reaction Time Matters</h2>
+            <p>Reaction time is crucial in many aspects of life, from sports performance to everyday activities. Our game helps you:</p>
+            <ul>
+                <li>Improve cognitive processing speed</li>
+                <li>Enhance hand-eye coordination</li>
+                <li>Develop better reflexes for sports and driving</li>
+                <li>Track your progress over time</li>
+            </ul>
+        </section>
 
-    <!-- Game Area -->
-    <div id="game-area">
-      <div id="target" class="target"></div>
-    </div>
+        <section class="game-section">
+            <h2>Try Our Reaction Trainer</h2>
+            <div class="game-container">
+                <div class="game-info">
+                    <p>Click the target as quickly as possible when it appears. You'll need <span id="total-clicks-display">20</span> successful clicks to complete a round.</p>
+                    <div id="start-menu">
+                        <label for="total-clicks">Total Clicks to Win:</label>
+                        <input type="number" id="total-clicks" value="20" min="1">
+                        <button id="start-button">🎮 Start Game 🎮</button>
+                    </div>
+                </div>
+                <div id="game-area">
+                    <div id="target" class="target"></div>
+                </div>
+                <div id="scoreboard">
+                    <div class="score">
+                        <span>Your Score:</span>
+                        <span id="your-score">0</span>
+                    </div>
+                    <div class="score">
+                        <span>Computer:</span>
+                        <span id="opponent-score">0</span>
+                    </div>
+                </div>
+                <div id="game-status">Ready to begin!</div>
+            </div>
+        </section>
 
-    <!-- Scoreboard -->
-    <div id="scoreboard">
-      <p>Your Score: <span id="your-score">0</span></p>
-      <p>Computer Score: <span id="opponent-score">0</span></p>
-    </div>
-    <h1>Reaction Game</h1>
-    <div id="start-menu">
-      <label for="total-clicks">Total Clicks to Win:</label>
-      <input type="number" id="total-clicks" value="20" min="1">
-      <button id="start-button">🎮 Start Game 🎮</button>
-    </div>
-    <p id="game-status">Press Start to Play!</p>
+        <section class="science">
+            <h2>The Science Behind Reaction Time</h2>
+            <p>Reaction time is the interval between the presentation of a stimulus and the initiation of a response. According to research:</p>
+            <ul>
+                <li>The average human reaction time to visual stimuli is about 250 milliseconds</li>
+                <li>Professional athletes often achieve reaction times under 200ms</li>
+                <li>Regular practice can improve reaction time by 15-20%</li>
+            </ul>
+            <p>Our game is designed based on principles from cognitive psychology and sports science to provide effective training.</p>
+        </section>
+    </main>
 
-    <!-- Blog-like Section -->
-    <div id="blog-section">
-      <h2>Tips to Improve Your Reflexes</h2>
-      <p>Improving your reflexes can help you in many areas of life, from sports to everyday tasks. Here are some tips:</p>
-      <ul>
-        <li>Practice regularly with games like this one.</li>
-        <li>Stay focused and avoid distractions.</li>
-        <li>Exercise regularly to improve your overall reaction time.</li>
-      </ul>
-    </div>
-
-    <!-- Footer -->
     <footer>
-      <p>© 2023 Reaction Game. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="about.html">About Us</a>
+            <a href="training.html">Training Resources</a>
+        </div>
+        <p>&copy; 2023 Reflex Trainer Pro. All rights reserved.</p>
     </footer>
-  </div>
 
-  <!-- AdSense Ad Unit -->
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-4941768679146334"
-       data-ad-slot="9456006006"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
     <!-- Winner Popup Modal -->
     <div id="winner-popup" class="modal">
         <div class="modal-content">
@@ -77,6 +90,6 @@
         <button id="close-modal">🎉 Play Again 🎉</button>
         </div>
     </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
